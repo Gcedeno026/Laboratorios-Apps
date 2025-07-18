@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Caja de texto para ingresar la dimensión de la matriz -->
+    <EditText
+        android:id="@+id/etBingoDimension"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese la dimensión de la matriz"
+        android:inputType="number"/>
+
+    <!-- Caja de texto para el UID del jugador -->
+    <EditText
+        android:id="@+id/etUID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código alfanumérico del jugador (UID)"
+        android:inputType="text"/>
+
+    <!-- Botón para generar la carta de Bingo -->
+    <Button
+        android:id="@+id/btnGenerateBingo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generar Bingo"
+        android:onClick="onGenerateBingo"/>
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvBingoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Juego de Bingo"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <!-- Aquí se añadirán dinámicamente los números de Bingo -->
+    <GridLayout
+        android:id="@+id/gridBingoNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:rowCount="5"
+        android:layout_gravity="center">
+
+        <!-- Los números de Bingo se agregarán dinámicamente desde el código -->
+
+    </GridLayout>
+
+    <!-- Botón para regenerar la carta -->
+    <Button
+        android:id="@+id/btnRegenerateBingo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regenerar Bingo"
+        android:onClick="onRegenerateBingo"/>
+
+</LinearLayout>
